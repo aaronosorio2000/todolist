@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<title>{% block title %}{% endblock %} - Task list</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin
+/><link
+  href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,400&display=swap"
+  rel="stylesheet"
+/>
+<nav>
+  <h1>Task list</h1>
+  <ul>
+    {% if g.user %}
+    <li><span>{{ g.user['username'] }}</span></li>
+    <li><a href="{{ url_for('auth.logout') }}">Cerrar sesión</a></li>
+    {% else %}
+    <li><a href="{{ url_for('auth.register') }}">Registrarse</a></li>
+    <li><a href="{{ url_for('auth.login') }}">Iniciar sesión</a></li>
+    {% endif %}
+  </ul>
+</nav>
+
+<section class="content">
+  <header>{% block header %}{% endblock %}</header>
+  {% for message in get_flashed_messages() %}
+  <div class="flash">{{ message }}</div>
+  {% endfor %} {% block content %}{% endblock %}
+</section>

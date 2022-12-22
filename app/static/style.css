@@ -1,0 +1,114 @@
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: #3a7cc5;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2862a3;
+  box-shadow: 0px 0px 10px 1px black;
+  color: white;
+}
+
+nav h1 {
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  text-decoration: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  color: gray;
+}
+
+nav li {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+}
+
+form {
+  font-size: 1.2rem;
+  color: rgb(240, 240, 240);
+}
+
+form label {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+
+input,
+input:focus {
+  width: 80%;
+  padding: 1rem;
+  color: white;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+  cursor: pointer;
+  margin: 1rem 0 2rem;
+  border-radius: 15px;
+}
+
+.action {
+  background-color: #63a3ed;
+  color: white;
+  text-decoration: none;
+  margin: 3rem;
+  padding: 1rem;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action:hover {
+  background-color: #4a73a2;
+}
+
+.todo {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.content__todo {
+  display: flex;
+  flex-direction: column;
+}
+
+hr {
+  height: 0.1rem;
+  max-width: 100%;
+  border: 0;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    white,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+ul {
+  padding-left: 0;
+}
